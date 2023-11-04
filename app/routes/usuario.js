@@ -1,6 +1,6 @@
 import express from "express";
 import routesVersioning  from 'express-routes-versioning';
-import { usuarioEnviador} from "../controllers/usuario.js";
+import { usuarioEnviador,usuarioreceptor} from "../controllers/usuario.js";
 
 
 const version = routesVersioning();
@@ -10,6 +10,9 @@ appusuario.get("/enviador", version({
     "1.0.0": usuarioEnviador
 })); 
 
+appusuario.get("/receptor", version({
+    "1.0.0": usuarioreceptor
+})); 
 
 
 

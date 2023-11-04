@@ -3,6 +3,7 @@ import express from "express";
 
 
 import appusuario from "./app/routes/usuario.js";
+import apppaquetes from "./app/routes/paquetes.js";
 
 
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 
  app.use('/usuario',appusuario);
+ app.use('/paquetes',apppaquetes);
 
 
 
